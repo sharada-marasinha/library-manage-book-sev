@@ -14,3 +14,11 @@ public class Book {
     private String category;
     private Integer qty;
 }
+
+//{
+//        "isbn": "2235",
+//        "title": "The END",
+//        "author": "saman",
+//        "category": null,
+//        "qty": 50
+//}

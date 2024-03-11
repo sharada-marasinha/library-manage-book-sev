@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/book")
 @RequiredArgsConstructor
@@ -30,8 +32,13 @@ public class BookController {
         return "Deleted";
 
     }
-    @GetMapping("search/{id}")
+    @GetMapping("/search/{id}")
     public Book getBookById(@PathVariable Long id){
         return service.getBookById(id);
+    }
+
+    @PostMapping("/add-list")
+    public void addList(@RequestBody List<Book> bookList){
+        service.addList(bookList);
     }
 }
